@@ -1,0 +1,84 @@
+{#
+.col-xs- <544px Extra small
+.col-sm- ≥544px Small 576px
+.col-md- ≥768px Medium 720px
+.col-lg- ≥992px Large 940px
+.col-xl- ≥1200px Extra large 1140px
+Gutter width	1.875rem / 30px (15px on each side of a column)
+#}
+{{ attach_library('lera/adaptive.bootstrap') }}
+{{ attach_library('lera/adaptive.layout') }}
+{{ attach_library('lera/adaptive.theme') }}
+
+<div class="page-wrapper">
+  <header id="header" role="banner">
+    <section id="header-small" class="hidden-lg-up">
+        <div class="header-small__inner">
+            <div class="container clearfix">
+                <div class="logo logo-small pull-left">
+                    <a href="/" title="Главная" rel="home" id="logo" class="logo">
+                        <img src="/themes/lera/logo.svg" alt="Главная"/>
+                    </a>
+                </div>
+                {% include directory ~ '/templates/layout/nav-togglers.html' %}
+            </div>
+        </div>
+        <div id="small-menu" class="container collapse">
+            <div class="small-menu__inner">
+                {{ page.menu_small }}
+            </div>
+        </div>
+    </section>
+    <section id="header-full" class="hidden-md-down clearfix">
+        <div class="container">
+            <div class="logo logo-full pull-left">
+                <a href="/">
+                    <img src="/themes/lera/logo.svg" alt="Главная"/>
+                </a>
+            </div>
+            {{ page.menu_main }}
+        </div>
+    </section>
+  </header>
+
+  <section id="sys">
+    <div class="container">
+      <div class="row">
+        <div class="height-0 col-md-12">
+          {{ page.tabs }}
+          {{ page.messages }}
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="main">
+    <div class="container">
+      <div class="row" id="main-content">
+        <div class="col-md-12" id="content-area">
+          {{ page.breadcrumb }}
+          {{ page.title }}
+          {{ page.content }}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 col-md-6 text-center text-md-left">
+          <span class="copy text-muted">
+          <a href="/user/login">©</a> {{ "now"|date("Y") }}.
+          "Ромашка". Все права защищены.</span>
+          {{ page.footer }}
+        </div>
+        <div class="col-lg-6 col-md-6 text-center text-md-right">
+          <div class="synapse">
+            ***
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
+{{ page.bottom }}

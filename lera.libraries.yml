@@ -1,0 +1,38 @@
+adaptive.bootstrap:
+  css:
+    layout:
+      bootstrap4/css/bootstrap.min.css: {}
+  js:
+    bootstrap4/tether/dist/js/tether.min.js: {}
+    bootstrap4/js/bootstrap.min.js: {}
+
+adaptive.layout:
+  css:
+    layout:
+      css/style.css: {}
+      css/adaptive.css: {}
+      css/admin/tabs.css: {}
+      css/layout.css: {}
+      css/header.css: {}
+      css/footer.css: {}
+
+adaptive.theme:
+  css:
+    theme:
+      css/main.css: {}
+  js:
+    js/script.js: {}
+  dependencies:
+    - core/jquery
+
+lera.admin:
+  css:
+    theme:
+      css/admin/admin.css: {}
+  js:
+    js/admin.js: {}
+  dependencies:
+    - core/jquery
+    - core/jquery.cookie
+    - core/jquery.ui.core
+    - core/jquery.ui.draggable
