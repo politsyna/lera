@@ -52,7 +52,14 @@ Gutter width	1.875rem / 30px (15px on each side of a column)
   width: 250px;
 }
 
-#node-kalkulator-form label {
+#node-kalkulator-edit-form .form-number,
+#node-kalkulator-edit-form .form-select {
+  display: inline-block;
+  width: 250px;
+}
+
+#node-kalkulator-form label,
+#node-kalkulator-edit-form label {
   width: 100px;
 }
 
